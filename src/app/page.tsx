@@ -2,40 +2,29 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="bg-gray-50 font-sans">
+    <div className="bg-white font-sans">
       {/* Navbar */}
       <header className="bg-white shadow-md">
         <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
           <div className="text-teal-500 font-bold text-lg">Satu Momen</div>
           <nav className="hidden md:flex space-x-6 text-gray-600">
             <a href="#" className="hover:text-teal-500">
+              Home
+            </a>
+            <a href="#" className="hover:text-teal-500">
               Tema
+            </a>
+            <a href="#" className="hover:text-teal-500">
+              Video 3D
             </a>
             <a href="#" className="hover:text-teal-500">
               Portofolio
             </a>
             <a href="#" className="hover:text-teal-500">
-              Harga
-            </a>
-            <a href="#" className="hover:text-teal-500">
-              Tutorial
-            </a>
-            <a href="#" className="hover:text-teal-500">
-              Cetak
-            </a>
-            <a href="#" className="hover:text-teal-500">
-              Video
-            </a>
-            <a href="#" className="hover:text-teal-500">
-              Blog
-            </a>
-            <a href="#" className="hover:text-teal-500">
-              Promo
+              Music
             </a>
           </nav>
-          <button className="bg-teal-500 text-white px-4 py-2 rounded-lg font-semibold shadow-md hover:bg-teal-600">
-            Daftar & Coba Gratis
-          </button>
+          <button className="btn-primary-sm">Portal Pelanggan</button>
         </div>
       </header>
 
@@ -50,19 +39,18 @@ export default function Home() {
               Buat undangan online digital website custom dengan Satu Momen,
               mudah digunakan, dan selesai dalam hitungan menit.
             </p>
-            <button className="bg-white text-teal-500 px-6 py-3 rounded-lg font-semibold shadow-md hover:bg-gray-100">
-              Daftar & Coba Gratis
-            </button>
+            <button className="btn-dark">Tanya-Tanya Dulu Yuk..</button>
           </div>
           <div className="md:w-1/2 flex justify-center">
-          <Image
-                src="https://satumomen.com/images/undangan-digital-website.webp"
-                alt="Phone Preview"
-                width={400}
-                height={600}
-                quality={100}
-                className="w-auto"
-              />
+            <Image
+              src="https://satumomen.com/images/aplikasi-undangan-digital-website.webp"
+              alt="Phone Preview"
+              width={400}
+              height={600}
+              quality={100}
+              objectFit="cover"
+              className="w-auto"
+            />
           </div>
         </div>
       </section>
@@ -185,52 +173,85 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-12 bg-gray-50">
-        <div className="container mx-auto px-4">
-          {/* Top Feature */}
-          <div className="flex flex-col lg:flex-row items-center gap-8 mb-16">
-            <div className="flex-1">
+      {/* Top Feature */}
+      <section className="bg-white">
+        <div className="container mx-auto max-sm:px-6 py-10">
+          <div className="flex flex-col lg:flex-row items-center max-sm:gap-8">
+            <div className="flex-1 relative flex items-end justify-center">
               <Image
-                src="/path-to-digital-invitation-image.png"
+                src="https://satumomen.com/images/undangan-digital-unlimited-tamu-undangan.webp"
                 alt="Digital Invitation"
-                width={500}
-                height={300}
-                className="rounded"
+                width={563}
+                height={435}
+                className="h-auto object-contain "
               />
             </div>
-            <div className="flex-1">
-              <h3 className="text-2xl lg:text-3xl font-bold text-gray-800 mb-4">
-                Buat Undangan Online Digital Website 10 Menit Cukup Pake HP Aja
-              </h3>
-              <p className="text-gray-600">
-                Buat undangan website praktis dan nyaman. Tanpa harus di depan
-                laptop berjam-jam. Cukup pilih tema, edit detail acara, upload
-                foto, semua bisa selesai dalam hitungan menit.
+            <div className="flex-1 place-self-center">
+              <h2 className="heading-2 max-md:text-4xl max-sm:text-3xl lg:text-5xl font-bold text-gray-800 mb-4">
+                Bebas Input Nama Tamu Sebanyak-Banyaknya
+              </h2>
+              <p className="text-dark">
+                Undangan tamu lebih sopan dengan undangan yang dibuat personal.
+                Tidak ada batasan tamu undangan kamu bisa kirim sepuasnya.
               </p>
-              <p className="mt-4 text-teal-500 font-semibold">satumomen.com</p>
             </div>
           </div>
+        </div>
+      </section>
 
-          {/* Bottom Feature */}
-          <div className="flex flex-col lg:flex-row items-center gap-8">
+      {/* Bottom Feature */}
+
+      <section className="bg-soft">
+        <div className="container mx-auto lg:px-20 max-sm:px-6 py-20">
+          <div className="flex flex-col lg:flex-row items-center justify-center max-md:gap-8 max-sm:gap-8 max-md:flex-col-reverse max-sm:flex-col-reverse">
             <div className="flex-1">
-              <h3 className="text-2xl lg:text-3xl font-bold text-gray-800 mb-4">
+              <h2 className="heading-2 max-md:text-4xl max-sm:text-3xl lg:text-5xl font-bold text-gray-800 mb-4">
                 450+ Pilihan Tema Beragam Kategori Acara
-              </h3>
-              <p className="text-gray-600">
+              </h2>
+              <p className="text-dark">
                 Cocok untuk Kamu yang ingin membuat website undangan nikah &
-                acara apapun. Tersedia 450+ tema undangan beragam kategori
-                tinggal pilih, edit, dan kirim undangan websitemu.
+                acara apapun. Tersedia 450+{" "}
+                <span className="text-primary">tema undangan beragam </span>
+                kategori tinggal pilih dan kirim undangan websitemu.
               </p>
             </div>
-            <div className="flex-1">
+            <div className="flex-1 text-center">
               <Image
-                src="/path-to-theme-selection-image.png"
+                src="https://satumomen.com/images/reseller-undangan-digital-website-4.webp"
                 alt="Theme Selection"
-                width={500}
-                height={300}
-                className="rounded"
+                width={550}
+                height={550}
+                objectFit="cover"
               />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-white">
+        <div className="container mx-auto max-sm:px-6 py-20">
+          <div className="flex flex-col lg:flex-row items-center max-sm:gap-8 mb-8">
+            <div className="flex-1 relative flex items-end justify-center">
+              <Image
+                src="https://satumomen.com/images/reseller-undangan-digital-website-7.webp"
+                alt="Digital Invitation"
+                width={563}
+                height={435}
+                objectFit="cover"
+                quality={100}
+              />
+            </div>
+            <div className="flex-1 place-self-center">
+              <h2 className="heading-2 max-md:text-4xl max-sm:text-3xl lg:text-5xl font-bold text-gray-800">
+                Ratusan Pilihan Music Latar & Bisa Custom
+              </h2>
+              <p className="text-dark">
+                Tersedia lebih dari 600 music latar untuk beragam kategori
+                undangan. Kamu juga bisa{" "}
+                <span className="text-primary">
+                  custom music sendiri dari Sound Cloud.
+                </span>
+              </p>
             </div>
           </div>
         </div>
