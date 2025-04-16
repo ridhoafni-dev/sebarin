@@ -1,136 +1,23 @@
 import LeftSectionSpec from "./components/left-section-spec";
 import RightSectionSpec from "./components/right-section-spec";
-import ItemServices from "./components/item-services";
 import HeroSection from "./components/hero-section";
 import ItemFeature from "./components/item-feature";
+import { mainFeatures } from "@/data";
+import ServicesSection from "./components/services-section";
+import StepsSection from "./components/steps-section";
+import ReviewsSection from "./components/reviews-section";
+import FaqsSection from "./components/faqs-section";
+import PaymentsSection from "./components/payments-section";
+import HelpSection from "./components/help-section";
 
 export default function Home() {
-  const mainFeatures = [
-    {
-      title: "Custom Nama Tamu Undangan",
-    },
-    {
-      title: "Custom Musik Latar",
-    },
-    {
-      title: "Tema Lengkap Bisa Custom",
-    },
-    {
-      title: "Form RSVP & Ucapan",
-    },
-    {
-      title: "Amplop Digital & Tanda Kasih",
-    },
-    {
-      title: "Hitung Mundur Waktu Acara",
-    },
-    {
-      title: "Integrasi Google Maps",
-    },
-    {
-      title: "Galeri Foto & Video",
-    },
-    {
-      title: "Informasi Live Streaming",
-    },
-    {
-      title: "QR Code Check-In Acara",
-    },
-    {
-      title: "Layar Sapa & Check-In Counter",
-    },
-  ];
-  const features = [
-    {
-      title: "Undangan Website",
-      description:
-        "Cara termudah membuat undangan digital website dengan desain yang dapat di customisasi.",
-      url: "https://satumomen.com/images/undangan-digital-website.webp",
-    },
-    {
-      title: "Undangan Video 3D",
-      description:
-        "Dengan undangan video 3D ini dijamin tamu undangan terpesona dan hadir ke acara kamu.",
-      url: "https://satumomen.com/images/undangan-video-3d.webp",
-    },
-    {
-      title: "Video Ucapan 3D",
-      description:
-        "Jasa bikin video ucapan ulang tahun dan hari-hari besar, seperti idul fitri, natal, 17 agustus, dll.",
-      url: "https://satumomen.com/images/jasa-bikin-video-ucapan.webp",
-    },
-
-    {
-      title: "Check-In System",
-      description:
-        "Kelola daftar tamu secara digital dengan fitur RSVP yang dilengkapi QR Code check-in system.",
-      url: "https://satumomen.com/images/checkin-system.webp",
-    },
-
-    {
-      title: "Affiliate",
-      description:
-        "Dapatkan income dengan menjadi partner kami. Mulai dengan tanpa modal dan komisi 30%.",
-      url: "https://satumomen.com/images/reseller-undangan-digital.webp",
-    },
-    {
-      title: "Undangan Cetak",
-      description:
-        "Kualitas premium, harga terjangkau. Dengan desain yang bisa di custom sesuai keinginan.",
-      url: "https://satumomen.com/images/undangan-cetak.webp",
-    },
-  ];
-
   return (
-    <div className="bg-white font-sans">
-      {/* Navbar */}
-      <header className="bg-white shadow-md">
-        <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
-          <div className="text-teal-500 font-bold text-lg">Satu Momen</div>
-          <nav className="hidden md:flex space-x-6 text-gray-600">
-            <a href="#" className="hover:text-teal-500">
-              Home
-            </a>
-            <a href="#" className="hover:text-teal-500">
-              Tema
-            </a>
-            <a href="#" className="hover:text-teal-500">
-              Video 3D
-            </a>
-            <a href="#" className="hover:text-teal-500">
-              Portofolio
-            </a>
-            <a href="#" className="hover:text-teal-500">
-              Music
-            </a>
-          </nav>
-          <button className="btn-primary-sm">Portal Pelanggan</button>
-        </div>
-      </header>
-
+    <>
       {/* Hero Section */}
-      <section className="bg-teal-500 text-white px-6 py-12">
-        <HeroSection />
-      </section>
+      <HeroSection />
 
       {/* Features Section */}
-      <section className="py-12 bg-gray-50">
-        <div className="container mx-auto max-md:px-8 max-sm:px-6">
-          <h2 className="text-3xl font-bold text-gray-800 text-center mb-8">
-            Semua yang Kamu butuhkan untuk wujudkan Momen impian
-          </h2>
-          <div
-            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 
-                gap-4 sm:gap-6 md:gap-8 lg:gap-10 
-                max-w-7xl mx-auto 
-                px-4 sm:px-6 lg:px-8"
-          >
-            {features.map((feature) => (
-              <ItemServices key={feature.title} {...feature} />
-            ))}
-          </div>
-        </div>
-      </section>
+      <ServicesSection />
 
       {/* Top Feature */}
       <section className="bg-white">
@@ -193,8 +80,50 @@ export default function Home() {
         />
       </section>
 
-      <section className="">
+      <section className="bg-white">
         <LeftSectionSpec
+          url="https://satumomen.com/images/reseller-undangan-digital-website-1.webp"
+          title="Bisa Custom Domain Atas Nama Pribadi atau Brand"
+          description={
+            <p className="text-dark">
+              Tampil unik dan exclusive beda dari yang lain. Miliki website
+              undangan digital dengan domain sendiri seperti nama brand atau
+              nama pasangan.
+            </p>
+          }
+        />
+      </section>
+
+      <section className="bg-soft">
+        <RightSectionSpec
+          url="https://assets.satumomen.com/images/media/8625-media-1720428807.png"
+          title="Dilengkapi Form Ucapan & RSVP Yang Fleksibel"
+          description={
+            <p className="text-dark">
+              Dapatkan data yang diperlukan untuk kesuksesan acara Kamu. Tambah
+              kolom atau nonaktifkan yang tidak dibutuhkan.
+            </p>
+          }
+        />
+      </section>
+
+      <section className="bg-white">
+        <LeftSectionSpec
+          url="https://assets.satumomen.com/images/media/8625-media-1720429667.png"
+          title="Kamu Punya Desain Sendiri?"
+          description={
+            <p className="text-dark">
+              Tenang, kami bisa membuatkan undangan dengan{" "}
+              <span className="text-primary font-semibold">desain custom</span>{" "}
+              khusus untuk kamu. Prosesnya cepat dan mudah kami akan bereskan
+              dari A-Z sampai acara kamu berlangsung.
+            </p>
+          }
+        />
+      </section>
+
+      <section className="">
+        <RightSectionSpec
           url="https://satumomen.com/images/ucapan-dan-rsvp.webp"
           title="Undangan impian dengan beragam fitur andalan"
           description={
@@ -213,6 +142,21 @@ export default function Home() {
           }
         />
       </section>
-    </div>
+
+      {/* Steps Section */}
+      <StepsSection />
+
+      {/* Reviews Section */}
+      <ReviewsSection />
+
+      {/* Payments Section */}
+      <PaymentsSection />
+
+      {/* Help Section */}
+      <HelpSection />
+
+      {/* Faqs Section */}
+      <FaqsSection />
+    </>
   );
 }

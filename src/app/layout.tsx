@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import localFont from "next/font/local";
+import Header from "./components/header";
+import FooterSection from "./components/footer-section";
+import { DialogProvider } from "@/providers/dialog-provider";
 
 const segoeUI = localFont({
   src: [
@@ -40,7 +43,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${segoeUI.variable}`}>{children}</body>
+      <body className={`${segoeUI.variable}`}>
+        <DialogProvider />
+        {/* Navbar */}
+        <Header />
+        {children}
+        {/* Footer */}
+        <FooterSection />
+      </body>
     </html>
   );
 }
